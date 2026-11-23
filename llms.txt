@@ -1,0 +1,9 @@
+# llm-quota-router
+
+> Zero-dependency Python multi-bucket LLM quota router with sticky prompt-cache affinity, HTTP 429 cooldowns, and circuit-breaker failover for AI agent loops.
+
+## Key Components
+- QuotaBucket: Rolling window capacity & automatic refill tracking.
+- ProviderAccount: Isolated credential slot with model capabilities, priority, and cooldown state.
+- CircuitBreaker: Closed / Open / Half-Open failure isolator.
+- QuotaRouter: Deterministic selection + `execute_with_failover()` wrapper.
